@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Cactus Theme</title>
+    <link>https://chiamaka.github.io/blog/</link>
+    <description>Recent content on Hugo Cactus Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 May 2017 18:24:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://chiamaka.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Initial commit</title>
+      <link>https://chiamaka.github.io/blog/post/initial-post/</link>
+      <pubDate>Tue, 23 May 2017 18:24:45 +0000</pubDate>
+      
+      <guid>https://chiamaka.github.io/blog/post/initial-post/</guid>
+      <description>This is my first post on this blog.
+Instead of the legendary &amp;ldquo;hello world&amp;rdquo; sentence for doing something for the first time in coding, I&amp;rsquo;ll call mine &amp;ldquo;Initial commit&amp;rdquo; after your first commit in git.
+Today also signifies the day I was partially let go from my job, not fully. LOL, its complicated, I&amp;rsquo;ll most likely blog about it later.
+Anyways, this is the first post on this blog and hopefully more to come.</description>
+    </item>
+    
+    <item>
+      <title>Contact me</title>
+      <link>https://chiamaka.github.io/blog/contact/</link>
+      <pubDate>Tue, 23 May 2017 18:17:15 +0000</pubDate>
+      
+      <guid>https://chiamaka.github.io/blog/contact/</guid>
+      <description>To get to me, the quickest way is through Twitter @Mz_Chi
+Then if you aren&amp;rsquo;t the kind of person who tweets, you can reach me via email</description>
+    </item>
+    
+  </channel>
+</rss>
