@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo Cactus Theme</title>
-    <link>https://chiamaka.github.io/</link>
+    <link>http://www.chiamaka.xyz/</link>
     <description>Recent content on Hugo Cactus Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 May 2017 00:08:00 +0000</lastBuildDate>
     
-	<atom:link href="https://chiamaka.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.chiamaka.xyz/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating A Round Button With React Native Vector Icons</title>
-      <link>https://chiamaka.github.io/post/round-button/</link>
+      <link>http://www.chiamaka.xyz/post/round-button/</link>
       <pubDate>Thu, 25 May 2017 00:08:00 +0000</pubDate>
       
-      <guid>https://chiamaka.github.io/post/round-button/</guid>
+      <guid>http://www.chiamaka.xyz/post/round-button/</guid>
       <description>I had a design I wanted to replicate and the button in this design is a round button and it has an icon in it.
 Here is a snapshot
 I immediately set out to accomplish the task. In my head, it was going to take less than 10 minutes. Ooh was I wrong. It took me the whole day to figure out.
@@ -25,10 +25,10 @@ I&amp;rsquo;ll try to make the process be less painful for you and for my future
     
     <item>
       <title>Initial commit</title>
-      <link>https://chiamaka.github.io/post/initial-post/</link>
+      <link>http://www.chiamaka.xyz/post/initial-post/</link>
       <pubDate>Tue, 23 May 2017 18:24:45 +0000</pubDate>
       
-      <guid>https://chiamaka.github.io/post/initial-post/</guid>
+      <guid>http://www.chiamaka.xyz/post/initial-post/</guid>
       <description>This is my first post on this blog.
 Instead of the legendary &amp;ldquo;hello world&amp;rdquo; sentence for doing something for the first time in coding, I&amp;rsquo;ll call mine &amp;ldquo;Initial commit&amp;rdquo; after your first commit in git.
 Today also signifies the day I was partially let go from my job, not fully. LOL, its complicated, I&amp;rsquo;ll most likely blog about it later.
@@ -37,10 +37,10 @@ Anyways, this is the first post on this blog and hopefully more to come.</descri
     
     <item>
       <title>Contact me</title>
-      <link>https://chiamaka.github.io/contact/</link>
+      <link>http://www.chiamaka.xyz/contact/</link>
       <pubDate>Tue, 23 May 2017 18:17:15 +0000</pubDate>
       
-      <guid>https://chiamaka.github.io/contact/</guid>
+      <guid>http://www.chiamaka.xyz/contact/</guid>
       <description>To get to me, the quickest way is through Twitter @Mz_Chi
 Then if you aren&amp;rsquo;t the kind of person who tweets, you can reach me via email</description>
     </item>
