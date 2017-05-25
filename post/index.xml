@@ -2,21 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hugo Cactus Theme</title>
-    <link>https://chiamaka.github.io/blog/post/</link>
+    <link>https://chiamaka.github.io/post/</link>
     <description>Recent content in Posts on Hugo Cactus Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 May 2017 18:24:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 May 2017 00:08:00 +0000</lastBuildDate>
     
-	<atom:link href="https://chiamaka.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chiamaka.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Creating A Round Button With React Native Vector Icons</title>
+      <link>https://chiamaka.github.io/post/round-button/</link>
+      <pubDate>Thu, 25 May 2017 00:08:00 +0000</pubDate>
+      
+      <guid>https://chiamaka.github.io/post/round-button/</guid>
+      <description>I had a design I wanted to replicate and the button in this design is a round button and it has an icon in it.
+Here is a snapshot
+I immediately set out to accomplish the task. In my head, it was going to take less than 10 minutes. Ooh was I wrong. It took me the whole day to figure out.
+I&amp;rsquo;ll try to make the process be less painful for you and for my future self (I tend to forget alot.</description>
+    </item>
+    
+    <item>
       <title>Initial commit</title>
-      <link>https://chiamaka.github.io/blog/post/initial-post/</link>
+      <link>https://chiamaka.github.io/post/initial-post/</link>
       <pubDate>Tue, 23 May 2017 18:24:45 +0000</pubDate>
       
-      <guid>https://chiamaka.github.io/blog/post/initial-post/</guid>
+      <guid>https://chiamaka.github.io/post/initial-post/</guid>
       <description>This is my first post on this blog.
 Instead of the legendary &amp;ldquo;hello world&amp;rdquo; sentence for doing something for the first time in coding, I&amp;rsquo;ll call mine &amp;ldquo;Initial commit&amp;rdquo; after your first commit in git.
 Today also signifies the day I was partially let go from my job, not fully. LOL, its complicated, I&amp;rsquo;ll most likely blog about it later.

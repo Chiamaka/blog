@@ -2,39 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chiamaka.github.io/blog/post/initial-post/</loc>
+    <loc>https://chiamaka.github.io/post/round-button/</loc>
+    <lastmod>2017-05-25T00:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chiamaka.github.io/post/initial-post/</loc>
     <lastmod>2017-05-23T18:24:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/contact/</loc>
+    <loc>https://chiamaka.github.io/contact/</loc>
     <lastmod>2017-05-23T18:17:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/about/</loc>
+    <loc>https://chiamaka.github.io/about/</loc>
     <lastmod>2017-05-23T15:53:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/categories/</loc>
+    <loc>https://chiamaka.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/</loc>
-    <lastmod>2017-05-23T18:24:45+00:00</lastmod>
+    <loc>https://chiamaka.github.io/</loc>
+    <lastmod>2017-05-25T00:08:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/post/</loc>
-    <lastmod>2017-05-23T18:24:45+00:00</lastmod>
+    <loc>https://chiamaka.github.io/post/</loc>
+    <lastmod>2017-05-25T00:08:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chiamaka.github.io/blog/tags/</loc>
+    <loc>https://chiamaka.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
