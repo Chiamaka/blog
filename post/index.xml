@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Chiamaka&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 May 2017 00:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 May 2017 15:09:00 +0000</lastBuildDate>
     
 	<atom:link href="http://chiamaka.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I&#39;m Creating An OSS Shopping Cart Component. Wanna Join In?</title>
+      <link>http://chiamaka.github.io/blog/post/ui-mockup-created/</link>
+      <pubDate>Fri, 26 May 2017 15:09:00 +0000</pubDate>
+      
+      <guid>http://chiamaka.github.io/blog/post/ui-mockup-created/</guid>
+      <description>So some time back I was roaming on the FB react-native community (if you don&amp;rsquo;t know that, click here) and I saw someone asking if there was a component like this and he posted up a photo of what he needed. I didn&amp;rsquo;t know if there was one but I had the idea that maybe I could build one.
+So hear me out.
+I&amp;rsquo;m hoping that maybe, just maybe, someone would be willing to work on this with me to make it a really helpful component.</description>
+    </item>
     
     <item>
       <title>Creating A Round Button With React Native Vector Icons</title>
