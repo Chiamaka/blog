@@ -6,10 +6,20 @@
     <description>Recent content on Chiamaka&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 May 2017 15:09:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jul 2017 15:35:25 +0000</lastBuildDate>
     
 	<atom:link href="http://chiamaka.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Loading Images Over HTTP In React Native</title>
+      <link>http://chiamaka.github.io/blog/post/images-over-http/</link>
+      <pubDate>Wed, 19 Jul 2017 15:35:25 +0000</pubDate>
+      
+      <guid>http://chiamaka.github.io/blog/post/images-over-http/</guid>
+      <description>Recently, I was working on an app and I needed to get some data over an API. Everything was working according to plan until I wanted to show images that I was getting from the API, remote urls and boom, shit was falling apart. What was crazy to me was that a few were loading.
+I didn’t get what the fuck was going on. I poured over my code, looking for some semblance of an error, maybe a typo that must be hiding in plain sight, nothing.</description>
+    </item>
     
     <item>
       <title>I&#39;m Creating An OSS Shopping Cart Component. Wanna Join In?</title>

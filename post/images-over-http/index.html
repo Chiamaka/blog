@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Chiamaka Nwolisa">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.20.7" />
+<title>Loading Images Over HTTP In React Native</title>
+<link rel="shortcut icon" href="http://chiamaka.github.io/blog/images/favicon.ico">
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/style.css">
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/monosocialiconsfont.css">
+
+
+
+
+<meta property="og:title" content="Loading Images Over HTTP In React Native" />
+<meta property="og:description" content="Recently, I was working on an app and I needed to get some data over an API. Everything was working according to plan until I wanted to show images that I was getting from the API, remote urls and boom, shit was falling apart. What was crazy to me was that a few were loading.
+I didn’t get what the fuck was going on. I poured over my code, looking for some semblance of an error, maybe a typo that must be hiding in plain sight, nothing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://chiamaka.github.io/blog/post/images-over-http/" />
+
+
+
+<meta property="article:published_time" content="2017-07-19T15:35:25&#43;00:00"/>
+<meta property="article:modified_time" content="2017-07-19T15:35:25&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Loading Images Over HTTP In React Native">
+<meta itemprop="description" content="Recently, I was working on an app and I needed to get some data over an API. Everything was working according to plan until I wanted to show images that I was getting from the API, remote urls and boom, shit was falling apart. What was crazy to me was that a few were loading.
+I didn’t get what the fuck was going on. I poured over my code, looking for some semblance of an error, maybe a typo that must be hiding in plain sight, nothing.">
+
+
+<meta itemprop="dateModified" content="2017-07-19T15:35:25&#43;00:00" />
+<meta itemprop="wordCount" content="385">
+
+
+
+<meta itemprop="keywords" content="react-native," />
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Loading Images Over HTTP In React Native"/>
+<meta name="twitter:title" content="Loading Images Over HTTP In React Native"/>
+<meta name="twitter:description" content="Recently, I was working on an app and I needed to get some data over an API. Everything was working according to plan until I wanted to show images that I was getting from the API, remote urls and boom, shit was falling apart. What was crazy to me was that a few were loading.
+I didn’t get what the fuck was going on. I poured over my code, looking for some semblance of an error, maybe a typo that must be hiding in plain sight, nothing."/>
+<meta name="twitter:site" content="@https://www.twitter.com/Mz_Chi"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+
+  
+  
+    <a href='http://chiamaka.github.io/blog'> <span class="arrow">←</span>Home</a>
+   
+  
+   
+  
+  
+</nav>
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Loading Images Over HTTP In React Native</h1>
+        <h2 class="headline">
+        July 19, 2017
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Recently, I was working on an app and I needed to get some data over an API. Everything was working according to plan until I wanted to show images that I was getting from the API, remote urls and boom, shit was falling apart. What was crazy to me was that a few were loading.</p>
+
+<p>I didn’t get what the fuck was going on. I poured over my code, looking for some semblance of an error, maybe a typo that must be hiding in plain sight, nothing. I logged out the url I was getting from the API and there it was, staring me in the face.</p>
+
+<p>I kept asking myself, “What the fuck is happening”?  So I set it aside and said I was gonna come back to it (I was secretly hoping that it would fix itself, you know how JavaScript acts times, lol). A week later, still wasn’t working, so I decided its time to take this motherfucker by the balls.</p>
+
+<p>I googled this issue and in a thread somewhere on Github, I saw that Images can only be loaded if they are secure i.e HTTPS. Okay, thats cool but I can’t change the images from the API to serve over HTTPS, I needed something else, another way, NOW!</p>
+
+<p>Then I came across something in apple called <strong>ATS (Application Transport Security)</strong> which is a baked in security measure. It protects your app from loading insecure data. I totally get that but for this scenario, I needed to override that so I dug deeper and found out how to do it, I had to change my info.plist and add exceptions for my API.</p>
+
+<p>(Please don’t get me started on the XML format of the info.plist, I was shook, JSON for the win)</p>
+
+<p>You can do it like so:</p>
+
+<pre><code>&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+  &lt;key&gt;NSExceptionDomains&lt;/key&gt;
+  &lt;dict&gt;
+    &lt;key&gt;example.com&lt;/key&gt;
+    &lt;dict&gt;
+      &lt;!--Include to allow subdomains--&gt;
+      &lt;key&gt;NSIncludesSubdomains&lt;/key&gt;
+      &lt;true/&gt;
+      &lt;!--Include to allow HTTP requests--&gt;
+      &lt;key&gt;NSTemporaryExceptionAllowsInsecureHTTPLoads&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/dict&gt;
+&lt;/dict&gt;
+</code></pre>
+
+<p>But this wasn’t enough for my scenario. The images I wanted to load were not particularly prefixed with my API’s domain name, so they weren’t all loading up.  I did something I’m not proud of, if you know a better way, please let me know (<strong>cries in shame</strong>)</p>
+
+<pre><code>&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+  &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+      &lt;true/&gt;
+&lt;/dict&gt;
+</code></pre>
+
+<p>I’m happy to announce that all the images show up.</p>
+
+<p><img src="https://media.giphy.com/media/FBzqZGthkW6KQ/giphy.gif" alt="Dancing in code works" /></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <a href="https://twitter.com/Mz_Chi">
+      <img class="avatar" src="http://chiamaka.github.io/blog/images/avatar.jpeg">
+      <div>
+          <span class="dark">Chiamaka Nwolisa</span>
+          <span>Sometimes, I take myself too seriously! You shouldnt</span>
+      </div>
+      
+    </a>
+    
+    <section id="sharing">
+        <a class="twitter" href='https://twitter.com/intent/tweet?text="Loading%20Images%20Over%20HTTP%20In%20React%20Native" by @Mz_Chi  http%3a%2f%2fchiamaka.github.io%2fblog%2fpost%2fimages-over-http%2f'>
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;">
+    <span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'chiamakas-blog';
+    var disqus_identifier = 'http:\/\/chiamaka.github.io\/blog\/post\/images-over-http\/';
+    var disqus_title = 'Loading Images Over HTTP In React Native';
+    var disqus_url = 'http:\/\/chiamaka.github.io\/blog\/post\/images-over-http\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/blog/post/ui-mockup-created/">I&#39;m Creating An OSS Shopping Cart Component. Wanna Join In?<aside class="dates">May 26 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/post/round-button/">Creating A Round Button With React Native Vector Icons<aside class="dates">May 25 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/post/initial-post/">Initial commit<aside class="dates">May 23 2017</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.facebook.com/chiamaka.nwolisa.3">
+        circlefacebook
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/Chiamaka">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://soundcloud.com/chiamaka-nwolisa">
+        circlesoundcloud
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/Mz_Chi">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Chiamaka Nwolisa
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://chiamaka.github.io/blog/js/main.js"></script>
+<script src="http://chiamaka.github.io/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92239529-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
