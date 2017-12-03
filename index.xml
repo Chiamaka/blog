@@ -6,10 +6,21 @@
     <description>Recent content on Chiamaka&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2017 15:35:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2017 12:46:58 +0000</lastBuildDate>
     
 	<atom:link href="http://chiamaka.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>For loops in Swift 4</title>
+      <link>http://chiamaka.github.io/blog/post/forloops-in-swift/</link>
+      <pubDate>Sun, 03 Dec 2017 12:46:58 +0000</pubDate>
+      
+      <guid>http://chiamaka.github.io/blog/post/forloops-in-swift/</guid>
+      <description>I started learning Swift a few weeks back and coming from JavaScript, I always get confused about somethings. I intermittenly carry some patterns from JS over to Swift unconsciously, the for loop in JS is one of those things.
+If you know JS, you recognise this as the way for loops are written
+for (let i=0; i&amp;lt;=5; i++){ ... }  Well, this is not the way for loops are written in Swift.</description>
+    </item>
     
     <item>
       <title>Loading Images Over HTTP In React Native</title>

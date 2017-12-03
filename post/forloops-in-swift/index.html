@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Chiamaka Nwolisa">
+<meta name="description" content="Describe your website">
+<meta name="generator" content="Hugo 0.30.2" />
+<title>For loops in Swift 4</title>
+<link rel="shortcut icon" href="http://chiamaka.github.io/blog/images/favicon.ico">
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/style.css">
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="http://chiamaka.github.io/blog/css/monosocialiconsfont.css">
+
+
+
+
+<meta property="og:title" content="For loops in Swift 4" />
+<meta property="og:description" content="I started learning Swift a few weeks back and coming from JavaScript, I always get confused about somethings. I intermittenly carry some patterns from JS over to Swift unconsciously, the for loop in JS is one of those things.
+If you know JS, you recognise this as the way for loops are written
+for (let i=0; i&lt;=5; i&#43;&#43;){ ... }  Well, this is not the way for loops are written in Swift." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://chiamaka.github.io/blog/post/forloops-in-swift/" />
+
+
+
+<meta property="article:published_time" content="2017-12-03T12:46:58&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-12-03T12:46:58&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="For loops in Swift 4">
+<meta itemprop="description" content="I started learning Swift a few weeks back and coming from JavaScript, I always get confused about somethings. I intermittenly carry some patterns from JS over to Swift unconsciously, the for loop in JS is one of those things.
+If you know JS, you recognise this as the way for loops are written
+for (let i=0; i&lt;=5; i&#43;&#43;){ ... }  Well, this is not the way for loops are written in Swift.">
+
+
+<meta itemprop="datePublished" content="2017-12-03T12:46:58&#43;00:00" />
+<meta itemprop="dateModified" content="2017-12-03T12:46:58&#43;00:00" />
+<meta itemprop="wordCount" content="395">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="For loops in Swift 4"/>
+<meta name="twitter:description" content="I started learning Swift a few weeks back and coming from JavaScript, I always get confused about somethings. I intermittenly carry some patterns from JS over to Swift unconsciously, the for loop in JS is one of those things.
+If you know JS, you recognise this as the way for loops are written
+for (let i=0; i&lt;=5; i&#43;&#43;){ ... }  Well, this is not the way for loops are written in Swift."/>
+<meta name="twitter:site" content="@https://www.twitter.com/Mz_Chi"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+
+  
+  
+    <a href='http://chiamaka.github.io/blog'> <span class="arrow">←</span>Home</a>
+   
+  
+   
+  
+  
+</nav>
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>For loops in Swift 4</h1>
+        <h2 class="headline">
+        December 3, 2017
+        <br>
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>I started learning Swift a few weeks back and coming from JavaScript, I always get confused about somethings. I intermittenly carry some patterns from JS over to Swift unconsciously, the for loop in JS is one of those things.</p>
+
+<p>If you know JS, you recognise this as the way <code>for</code> loops are written</p>
+
+<pre><code class="language-js"> for (let i=0; i&lt;=5; i++){
+ 	...
+ }
+</code></pre>
+
+<p>Well, this is not the way <code>for</code> loops are written in Swift. Sorry</p>
+
+<p>From my studying, I have been able to craft out 3 ways to use for loops in Swift.</p>
+
+<h3 id="1-looping-over-arrays">1. Looping over arrays</h3>
+
+<p>If you want to loop over an array, this is how you would be able to accomplish that using Swift.</p>
+
+<pre><code>let names = [&quot;Anna&quot;, &quot;Sam&quot;, &quot;Smith&quot;]
+  for name in names {
+  	...
+  }
+</code></pre>
+
+<p>The snippet above loops over the <code>names</code> array and assigns every item in the array to the variable <code>name</code> and lets you use it in the block.</p>
+
+<h3 id="2-looping-over-a-dictionary">2. Looping over a dictionary</h3>
+
+<p>A dictionary is an unordered collection of key-value pairs.</p>
+
+<p><code>[&quot;spider&quot;: 8, &quot;ant&quot;: 6, &quot;cat&quot;: 4]</code> is a dictionary with keys <em>spider, ant, cat</em> &amp; values <em>8, 6 and 4</em> respectively</p>
+
+<p>Looping over the dictionary is as easy as doing this:</p>
+
+<pre><code>let numberOfLegs = [&quot;spider&quot;: 8, &quot;ant&quot;: 6, &quot;cat&quot;: 4]
+for (animalName, legCount) in numberOfLegs {
+    //animalName: spider
+    //legCount: 8
+    //....
+}
+</code></pre>
+
+<p>Imagine a scenario where you need to add up all the values in the array, this is an easy way to accomplish that.</p>
+
+<h3 id="3-looping-with-numeric-ranges">3. Looping with numeric ranges</h3>
+
+<p>Sometimes, you want a normal for loop like the JS snippet up top. In Swift, its ridicously easy to accomplish that using numeric ranges.</p>
+
+<pre><code>for index in 1...5 {
+	...
+}
+</code></pre>
+
+<p>The above snippet says, iterate over the range starting at 1 and inclusive of 5 i.e from 1 - 5</p>
+
+<p>The inclusive part is being determined by the number of dots between both numbers. There are 3 dots which signifies that it should loop from 1 to 5.</p>
+
+<p>If you do not want 5 included, you use this called the half-open range operator (..&lt;).</p>
+
+<pre><code>for index in 1..&lt;5 {
+	...
+}
+</code></pre>
+
+<p>This would loop from 1 to 4 and stop execution.</p>
+
+<p>NOTE: You might not care to use the index when looping with numeric ranges. You can ignore the index variable by subtituting it with an underscore (_)</p>
+
+<pre><code>for _ in 1...5 {
+	...
+}
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <a href="https://twitter.com/Mz_Chi">
+      <img class="avatar" src="http://chiamaka.github.io/blog/images/avatar.jpeg">
+      <div>
+          <span class="dark">Chiamaka Nwolisa</span>
+          <span>Sometimes, I take myself too seriously! You shouldnt</span>
+      </div>
+      
+    </a>
+    
+    <section id="sharing">
+        <a class="twitter" href='https://twitter.com/intent/tweet?text="For%20loops%20in%20Swift%204" by @Mz_Chi  http%3a%2f%2fchiamaka.github.io%2fblog%2fpost%2fforloops-in-swift%2f'>
+  <span class="icon-twitter"> Tweet</span>
+</a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;">
+    <span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "chiamakas-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/blog/post/images-over-http/">Loading Images Over HTTP In React Native<aside class="dates">Jul 19 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/post/ui-mockup-created/">I&#39;m Creating An OSS Shopping Cart Component. Wanna Join In?<aside class="dates">May 26 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/post/round-button/">Creating A Round Button With React Native Vector Icons<aside class="dates">May 25 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/blog/post/initial-post/">Initial commit<aside class="dates">May 23 2017</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.facebook.com/chiamaka.nwolisa.3">
+        circlefacebook
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/Chiamaka">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://soundcloud.com/chiamaka-nwolisa">
+        circlesoundcloud
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/Mz_Chi">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Chiamaka Nwolisa
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://chiamaka.github.io/blog/js/main.js"></script>
+<script src="http://chiamaka.github.io/blog/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92239529-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
